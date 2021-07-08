@@ -4,15 +4,35 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Tech Blog</title>
-    <link rel='stylesheet' href='/css/jass.css' />
     <link rel='stylesheet' href='/css/style.css' />
   </head>
 
-  <body>
+  <body class='flex-column min-100-vh'>
+    <nav class='navbar'>
+      <ul>
+        <li class='li-inline nav-item'><a href='/'>Home</a></li>
+        <li class='li-inline nav-item'><a href='/dashboard'>Dashboard</a></li>
+        <li class='li-inline nav-item'><a href='/login'>Login</a></li>
+        <li class='li-inline nav-item'><a
+            href='#'
+            id='logout-link'
+          >Logout</a></li>
+      </ul>
+    </nav>
+    <header class='hero'>
+      <h1 class='app-title'><a href='/'>The Tech Blog</a></h1>
+    </header>
+
     <main>
       <!-- Render the sub layout -->
       {{{body}}}
     </main>
+
+    <footer class='flex-row justify-center'>
+      &copy; The Tech Blog Folks
+    </footer>
+
+    <script src='/js/logout.js'></script>
   </body>
 
 </html>
